@@ -3,33 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SemiAMUN | Official Website</title>
-    <!-- 引入 Tailwind CSS（直接通过网络拉取样式，无需本地安装） -->
+    <title>Semiahmoo Model United Nations 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-50 font-sans text-slate-900">
+<body class="bg-slate-50 font-sans text-slate-900 scroll-smooth">
 
-    <!-- 顶部导航栏 (Navbar) -->
     <nav class="bg-white shadow-md w-full sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 
-                <!-- Logo / 社团名称 -->
-                <a href="#" class="text-2xl font-bold tracking-tighter text-blue-900">
-                    SemiAMUN
+                <a href="#" class="text-xl font-bold tracking-tight text-blue-900 hover:text-blue-700 transition">
+                    Semiahmoo MUN 2026
                 </a>
                 
-                <!-- 桌面端菜单 -->
-                <div class="hidden md:flex space-x-6">
-                    <a href="#" class="text-slate-600 hover:text-blue-600 font-medium transition">Home</a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#" class="text-slate-600 hover:text-blue-600 font-semibold transition">Home</a>
+                    <a href="#conference" class="text-slate-600 hover:text-blue-600 font-medium transition">Conference</a>
                     <a href="#committees" class="text-slate-600 hover:text-blue-600 font-medium transition">Committees</a>
-                    <a href="#secretariat" class="text-slate-600 hover:text-blue-600 font-medium transition">Secretariat</a>
-                    <a href="#schedule" class="text-slate-600 hover:text-blue-600 font-medium transition">Schedule</a>
+                    <a href="#register" class="text-slate-600 hover:text-blue-600 font-medium transition">Register</a>
+                    <a href="#apply" class="text-slate-600 hover:text-blue-600 font-medium transition">Apply</a>
+                    <a href="#contact" class="text-slate-600 hover:text-blue-600 font-medium transition">Contact</a>
                 </div>
 
-                <!-- 报名按钮 (后期可直接链接到 Google Forms) -->
                 <div class="hidden md:flex">
-                    <a href="#" class="bg-blue-600 text-white px-5 py-2 rounded shadow hover:bg-blue-700 transition font-semibold">
+                    <a href="#register" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700 transition text-sm font-semibold">
                         Register Now
                     </a>
                 </div>
@@ -38,24 +35,62 @@
         </div>
     </nav>
 
-    <!-- 首页主视觉区域 (Hero Section) -->
-    <header class="bg-blue-900 text-white py-24 text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <h1 class="text-5xl font-extrabold mb-6 tracking-tight">Welcome to SemiAMUN</h1>
-            <p class="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-                Fostering diplomacy, debate, and critical thinking. Join us for a premier Model United Nations experience.
+    <header class="relative bg-cover bg-center py-36 text-center text-white" 
+            style="background-image: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1920&q=80');">
+        
+        <div class="absolute inset-0 bg-slate-950/75 backdrop-blur-[1px]"></div>
+        
+        <div class="relative max-w-4xl mx-auto px-4 z-10">
+            <span class="inline-block bg-blue-600/30 text-blue-300 border border-blue-500/30 text-xs px-4 py-1.5 rounded-full font-bold uppercase tracking-widest mb-6">
+                Official Website
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-none text-white">
+                Semiahmoo Model <br class="md:hidden">United Nations 2026
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Fostering diplomacy, negotiation, and global leadership. Join us for an unparalleled academic debate experience.
             </p>
-            <a href="#committees" class="inline-block bg-white text-blue-900 px-8 py-3 rounded text-lg font-bold shadow-lg hover:bg-slate-100 transition">
-                View Committees
-            </a>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#register" class="bg-blue-600 text-white px-8 py-3 rounded text-base font-bold shadow-lg hover:bg-blue-700 transition">
+                    Register Now
+                </a>
+                <a href="#conference" class="bg-white/10 text-white border border-white/20 backdrop-blur px-8 py-3 rounded text-base font-bold hover:bg-white/20 transition">
+                    Learn More
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- 页面内容测试占位符 -->
-    <main class="max-w-6xl mx-auto px-4 py-16 text-center">
-        <h2 class="text-2xl font-bold text-slate-400">
-            网站成功上线！这里稍后将用来放置具体的会议信息。
-        </h2>
+    <main>
+        <section id="conference" class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">About the Conference</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-slate-600 leading-relaxed">
+                    November 30th, 2026 | Semiahmoo Secondary School
+                </p>
+            </div>
+        </section>
+
+        <section id="secretariat" class="py-20 bg-slate-50 border-t border-slate-100">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Meet the Secretariat</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto mb-12"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200/60">
+                        <div class="w-24 h-24 bg-slate-200 rounded-full mx-auto mb-4 flex items-center justify-center text-slate-400 text-xs">Photo</div>
+                        <h3 class="text-xl font-bold text-slate-900">Derek Lyu</h3>
+                        <p class="text-blue-600 text-sm font-medium mb-2">Co-President</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200/60">
+                        <div class="w-24 h-24 bg-slate-200 rounded-full mx-auto mb-4 flex items-center justify-center text-slate-400 text-xs">Photo</div>
+                        <h3 class="text-xl font-bold text-slate-900">Eva Kindrat</h3>
+                        <p class="text-blue-600 text-sm font-medium mb-2">Co-President</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 </body>
