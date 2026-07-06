@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +12,18 @@
         .font-diplomatic { font-family: 'Playfair Display', serif; }
     </style>
 </head>
-<body class="bg-[#F8F6EF] text-[#163354] scroll-smooth">
-
+<body class="bg-[#F8F6EF] text-[#163354]">
     <nav class="bg-[#F8F6EF]/95 backdrop-blur-sm shadow-sm w-full sticky top-0 z-50 border-b border-[#EAE5D9]">
         <div class="max-w-6xl mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center py-4">
                 
+                <!-- Logo -->
                 <a href="#" class="flex items-center space-x-3 text-xl font-diplomatic font-bold tracking-tight text-[#163354] hover:text-[#BA1E29] transition">
-    <img src="logo.jpg" alt="Semiahmoo MUN Logo" class="h-8 w-8 object-contain">
-    <span>Semiahmoo MUN 2026</span>
-            </a>
+                    <img src="logo.jpg" alt="Semiahmoo MUN Logo" class="h-8 w-8 object-contain">
+                    <span>Semiahmoo MUN 2026</span>
+                </a>
                 
+                <!-- Desktop Navigation Links -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#" class="text-[#3A5A78] hover:text-[#BA1E29] text-sm font-medium transition">Home</a>
                     <a href="#conference" class="text-[#3A5A78] hover:text-[#BA1E29] text-sm font-medium transition">Conference</a>
@@ -31,12 +32,39 @@
                     <a href="#secretariat" class="text-[#3A5A78] hover:text-[#BA1E29] text-sm font-medium transition">Secretariat</a>
                 </div>
 
+                <!-- Desktop Apply Button -->
                 <div class="hidden md:flex">
                     <a href="#register" class="bg-[#BA1E29] text-[#F8F6EF] px-5 py-2.5 rounded-sm shadow-sm hover:bg-[#8F161E] transition text-sm font-semibold tracking-wide">
                         Apply Now
                     </a>
                 </div>
+
+                <!-- Mobile Hamburger Button (NEW) -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-[#163354] hover:text-[#BA1E29] focus:outline-none transition">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- Hamburger Icon -->
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <!-- X (Close) Icon -->
+                            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
                 
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown (NEW) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#F8F6EF] border-t border-[#EAE5D9] absolute w-full shadow-lg">
+            <div class="flex flex-col px-6 pt-2 pb-6 space-y-3">
+                <a href="#" class="mobile-link text-[#3A5A78] hover:text-[#BA1E29] text-base font-medium transition block py-2 border-b border-[#EAE5D9]/50">Home</a>
+                <a href="#conference" class="mobile-link text-[#3A5A78] hover:text-[#BA1E29] text-base font-medium transition block py-2 border-b border-[#EAE5D9]/50">Conference</a>
+                <a href="#committees" class="mobile-link text-[#3A5A78] hover:text-[#BA1E29] text-base font-medium transition block py-2 border-b border-[#EAE5D9]/50">Committees</a>
+                <a href="#schedule" class="mobile-link text-[#3A5A78] hover:text-[#BA1E29] text-base font-medium transition block py-2 border-b border-[#EAE5D9]/50">Schedule</a>
+                <a href="#secretariat" class="mobile-link text-[#3A5A78] hover:text-[#BA1E29] text-base font-medium transition block py-2 border-b border-[#EAE5D9]/50">Secretariat</a>
+                <a href="#register" class="mobile-link bg-[#BA1E29] text-[#F8F6EF] px-5 py-3 rounded-sm shadow-sm hover:bg-[#8F161E] transition text-base font-semibold tracking-wide text-center mt-4 inline-block">
+                    Apply Now
+                </a>
             </div>
         </div>
     </nav>
@@ -200,6 +228,29 @@
             <p class="text-xs">&copy; 2026 Semiahmoo Model United Nations. All rights reserved.</p>
         </div>
     </footer>
+<!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
+        // Toggle menu on button click
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
